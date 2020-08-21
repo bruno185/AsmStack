@@ -9,7 +9,7 @@ MessageTxt db "Hello World"
 
 main PROC
 	
-	push 1234h
+	push 12345678h
 	call mysub
 	add esp,4
 	ret 
@@ -21,10 +21,10 @@ mysub PROC
 	mov ebp,esp
 	sub esp,8			; place pour variables lcales
 
-	mov eax,[ebp+8]
-	mov [esp],eax
-	mov eax, 7777h
-	mov [esp+4],eax
+	mov eax,[ebp+8]		; récuoère argument 1
+	mov [esp],eax		; le place dans variable  1
+	mov eax, 77778888h
+	mov [esp+4],eax		; place eax dans variable locale é
 
 	add esp,8
 	pop ebp
