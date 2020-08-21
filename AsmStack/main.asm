@@ -21,7 +21,7 @@ mysub PROC
 	mov ebp,esp
 	sub esp,8			; espace pour variables lcales
 
-	mov eax,[ebp+8]		; récuoère argument 1
+	mov eax,[ebp+8]		; récupère argument 1
 	mov [esp],eax		; le place dans variable 1
 	mov eax, 77778888h
 	mov [esp+4],eax		; place eax dans variable locale 2
