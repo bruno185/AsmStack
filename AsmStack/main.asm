@@ -22,8 +22,12 @@ mysub PROC
 	sub esp,8			; place pour variables lcales
 
 	mov eax,[ebp+8]
-	pop ebp
+	mov [esp],eax
+	mov eax, 7777h
+	mov [esp+4],eax
+
 	add esp,8
+	pop ebp
 	ret
 mysub ENDP
 
